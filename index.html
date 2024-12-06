@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="icon/jpg" href="logos/">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registro de Frequência de Estudantes</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Registro de Frequência</h1>
+        </header>
+
+        <section class="form-section">
+            <h2>ATA de Presença</h2>
+            <form id="attendance-form">
+                <input type="text" id="student-name" placeholder="Nome do Estudante" required />
+                <select id="attendance-status">
+                    <option value="Present">Presente</option>
+                    <option value="Absent">Faltou</option>
+                </select>
+                <input type="time" id="exit-time" placeholder="Hora de Saída" />
+                <textarea id="justification" placeholder="Justificativa"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section class="attendance-table">
+            <h2>Lista de Frequência</h2>
+            <table id="attendance-records">
+                <thead>
+                    <tr>
+                        <th>Nome do Estudante</th>
+                        <th>Status</th>
+                        <th>Data</th>
+                        <th>Hora de Saída</th>
+                        <th>Justificativa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Registros de presença aparecerão aqui -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="attendance-summary">
+            <h2>Resumo</h2>
+            <p><strong>Total de Estudantes: </strong><span id="total-students">0</span></p>
+            <p><strong>Total Presente: </strong><span id="total-present">0</span></p>
+            <p><strong>Total Ausente: </strong><span id="total-absent">0</span></p>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
